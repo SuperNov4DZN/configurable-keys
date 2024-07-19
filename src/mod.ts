@@ -4,6 +4,8 @@ import { IPostDBLoadMod } from "@spt/models/external/IPostDBLoadMod";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { DatabaseServer } from "@spt/servers/DatabaseServer";
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
+import { BaseClasses } from "@spt/models/enums/BaseClasses";
+import { LogTextColor } from "@spt/models/spt/logging/LogTextColor";
 import { VFS } from "@spt/utils/VFS";
 
 import { jsonc } from "jsonc";
@@ -13,10 +15,6 @@ class ConfigurableKeys implements IPostDBLoadMod
 {
     // Get package attributes/info
     private mod = require("../package.json");
-
-    // Get Log Clors & Base Class
-    private color = require("C:/snapshot/project/obj/models/spt/logging/LogTextColor");
-    private baseClasses = require("C:/snapshot/project/obj/models/enums/BaseClasses");
 
     public postDBLoad(container: DependencyContainer): void 
     {
@@ -31,8 +29,8 @@ class ConfigurableKeys implements IPostDBLoadMod
         // TODO: Refactor to use multiple config files per "category"
         const config = parseJsonc("config");
 
-        const color = this.color.LogTextColor
-        const baseClasses = this.baseClasses.BaseClasses
+        const color = LogTextColor
+        const baseClasses = BaseClasses
 
         // Get database
         const databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
