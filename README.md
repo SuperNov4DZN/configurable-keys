@@ -7,4 +7,5 @@ Right now the main functionality of the mod is giving keys & cards unlimited use
 
 TODO:
 -
-`Add possibility to edit keys/cards individually`
+- Add possibility to edit keys/cards individually.
+- Add possibility to open multiple doors with the same key.
