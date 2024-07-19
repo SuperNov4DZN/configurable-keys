@@ -1,5 +1,5 @@
 # configurable-keys
-Define how tarkov keys work for you! (Starting with Unlimited uses)
+Define how SPT keys & keycards work for you! (Starting with Unlimited uses)
 
 HOW IT WORKS:
 -
