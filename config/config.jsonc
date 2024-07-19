@@ -1,0 +1,23 @@
+{
+    "weightless_keys": true,
+    "unbreakable_keys": true,
+
+    "weightless_keycards": true,
+    "unbreakable_keycards": true,
+
+    "enable_blacklist": false,
+    "blacklisted_keys": [
+        "5780cf7f2459777de4559322",
+        "5d80c60f86f77440373c4ece",
+        "5d80c62a86f7744036212b3f",
+        "5ede7a8229445733cb4c18e2",
+        "62987dfc402c7f69bf010923",
+        "63a3a93f8a56922e82001f5d",
+        "64ccc25f95763a1ae376e447",
+        "5448ba0b4bdc2d02308b456c",
+        "593962ca86f774068014d9af",
+        "5937ee6486f77408994ba448",
+        "64d4b23dc1b37504b41ac2b6",
+        "63a39e1d234195315d4020bd"
+    ]
+}

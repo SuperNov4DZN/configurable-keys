@@ -1,1 +1,11 @@
-# Add
+# Folders
+/node_modules
+/dist
+/types
+
+# Files
+.buildignore
+.eslintignore
+.eslintrc.json
+build.mjs
+tsconfig.json
