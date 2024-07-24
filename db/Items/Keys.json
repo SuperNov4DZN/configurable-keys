@@ -1,0 +1,24 @@
+{
+    "66292e79a4d9da25e683ab55": {
+        "ItemToClone": "KEY_W112_SAN",
+        "OverrideProperties": {
+            "Prefab": {
+                "path": "assets/content/items/spec/keys/item_key_5.bundle",
+                "rcid": ""
+            },
+            "MaximumNumberOfUsage": -1,
+            "BackgroundColor": "red"
+        },
+        "LocalePush": {
+            "en": {
+                "name": "Shoreline Master Key",
+                "shortName": "SMK",
+                "description": "The Key to all your problems."
+            }
+        },
+        "Handbook": {
+            "HandbookParent": "5c518ec986f7743b68682ce2",
+            "HandbookPrice": 3141592
+        }
+    }
+}

@@ -8,13 +8,19 @@ import { BaseClasses } from "@spt/models/enums/BaseClasses";
 import { LogTextColor } from "@spt/models/spt/logging/LogTextColor";
 import { VFS } from "@spt/utils/VFS";
 
+import { ItemGenerator } from "./CustomKeys/ItemGenerator";
+import { References } from "./Refs/References";
+
 import { jsonc } from "jsonc";
 import path from "path";
 
 class ConfigurableKeys implements IPostDBLoadMod 
 {
-    // Get package attributes/info
+    // Get Package attributes/info
     private mod = require("../package.json");
+
+    // Get References
+    private ref: References = new References();
 
     public postDBLoad(container: DependencyContainer): void 
     {
@@ -40,7 +46,16 @@ class ConfigurableKeys implements IPostDBLoadMod
         // Get logger
         const logger = container.resolve<ILogger>("WinstonLogger");
 
+        // Add Custom Keys
+        const keyGenerator = new ItemGenerator(this.ref);
+
+        if (config.custom_keys) 
+        {
+            keyGenerator.createCustomItems("../db/Items/Keys.json");
+        }
+
         // TODO: Convert into function, Call for individual keys changing individual attributes
+        // Apply Changes to keys
         for (const item in items) 
         {
             const itemProps = items[item]._props;
