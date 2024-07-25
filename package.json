@@ -1,6 +1,6 @@
 {
     "name": "configurable-keys",
-    "version": "1.0.0-beta",
+    "version": "2.0.0-beta",
     "sptVersion": "~3.9",
     "loadBefore": ["ServerValueModifier"],
     "loadAfter": [],
@@ -28,6 +28,6 @@
         "jsonc": "^2.0.0"
     },
     "author": "Super",
-    "contributors": ["Toha3673"],
+    "contributors": [],
     "license": "MIT"
 }
