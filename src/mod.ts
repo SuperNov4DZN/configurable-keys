@@ -1,6 +1,7 @@
 import { DependencyContainer } from "tsyringe";
 
 import { IPostDBLoadMod } from "@spt/models/external/IPostDBLoadMod";
+import { IPreSptLoadMod } from "@spt/models/external/IPreSptLoadMod";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { DatabaseServer } from "@spt/servers/DatabaseServer";
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
@@ -10,20 +11,30 @@ import { VFS } from "@spt/utils/VFS";
 
 import { ItemGenerator } from "./CustomKeys/ItemGenerator";
 import { References } from "./Refs/References";
+import { InstanceManager } from "./Refs/InstanceManager";
 
 import { jsonc } from "jsonc";
 import path from "path";
 
-class ConfigurableKeys implements IPostDBLoadMod 
+class ConfigurableKeys implements IPreSptLoadMod, IPostDBLoadMod 
 {
     // Get Package attributes/info
     private mod = require("../package.json");
 
     // Get References
     private ref: References = new References();
+    private instance: InstanceManager = new InstanceManager();
+
+    public preSptLoad(container: DependencyContainer): void 
+    {
+        this.instance.preSptLoad(container, "Configurable Keys");
+    }
 
     public postDBLoad(container: DependencyContainer): void 
     {
+        // Load container into references
+        this.ref.postDBLoad(container);
+
         // Parse jsonc files
         const vfs = container.resolve<VFS>("VFS");
         const parseJsonc = (filename: string) =>
@@ -48,10 +59,9 @@ class ConfigurableKeys implements IPostDBLoadMod
 
         // Add Custom Keys
         const keyGenerator = new ItemGenerator(this.ref);
-
         if (config.custom_keys) 
         {
-            keyGenerator.createCustomItems("../db/Items/Keys.json");
+            keyGenerator.createCustomItems("../../db/Items");
         }
 
         // TODO: Convert into function, Call for individual keys changing individual attributes

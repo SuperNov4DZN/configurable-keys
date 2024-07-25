@@ -50,6 +50,8 @@ export class ItemGenerator
             };
             this.ref.customItem.createItemFromClone(newItem);
 
+            // TODO: Add keys to traders
+
             if (itemConfig.CloneToFilters) 
             {
                 this.cloneToFilters(itemConfig, newId);

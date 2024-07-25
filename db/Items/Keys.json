@@ -1,18 +1,216 @@
 {
-    "66292e79a4d9da25e683ab55": {
+    "66a1c2502b6fdd6c620ba891": {
         "ItemToClone": "KEY_W112_SAN",
         "OverrideProperties": {
             "Prefab": {
                 "path": "assets/content/items/spec/keys/item_key_5.bundle",
                 "rcid": ""
             },
-            "MaximumNumberOfUsage": -1,
-            "BackgroundColor": "red"
+            "BackgroundColor": "red",
+            "MaximumNumberOfUsage": -1
+        },
+        "LocalePush": {
+            "en": {
+                "name": "Factory Master Key",
+                "shortName": "FMK",
+                "description": "The Key to all your problems."
+            }
+        },
+        "Handbook": {
+            "HandbookParent": "5c518ec986f7743b68682ce2",
+            "HandbookPrice": 3141592
+        }
+    },
+    "66a1c8e951bcf7ade30f7943": {
+        "ItemToClone": "KEY_W112_SAN",
+        "OverrideProperties": {
+            "Prefab": {
+                "path": "assets/content/items/spec/keys/item_key_5.bundle",
+                "rcid": ""
+            },
+            "BackgroundColor": "red",
+            "MaximumNumberOfUsage": -1
+        },
+        "LocalePush": {
+            "en": {
+                "name": "Reserve Master Key",
+                "shortName": "RMK",
+                "description": "The Key to all your problems."
+            }
+        },
+        "Handbook": {
+            "HandbookParent": "5c518ec986f7743b68682ce2",
+            "HandbookPrice": 3141592
+        }
+    },
+    "66a1c8e951bcf7ade30f7944": {
+        "ItemToClone": "KEY_W112_SAN",
+        "OverrideProperties": {
+            "Prefab": {
+                "path": "assets/content/items/spec/keys/item_key_5.bundle",
+                "rcid": ""
+            },
+            "BackgroundColor": "red",
+            "MaximumNumberOfUsage": -1
         },
         "LocalePush": {
             "en": {
                 "name": "Shoreline Master Key",
                 "shortName": "SMK",
+                "description": "The Key to all your problems."
+            }
+        },
+        "Handbook": {
+            "HandbookParent": "5c518ec986f7743b68682ce2",
+            "HandbookPrice": 3141592
+        }
+    },
+    "66a1c8e951bcf7ade30f7945": {
+        "ItemToClone": "KEY_W112_SAN",
+        "OverrideProperties": {
+            "Prefab": {
+                "path": "assets/content/items/spec/keys/item_key_5.bundle",
+                "rcid": ""
+            },
+            "BackgroundColor": "red",
+            "MaximumNumberOfUsage": -1
+        },
+        "LocalePush": {
+            "en": {
+                "name": "Customs Master Key",
+                "shortName": "CMK",
+                "description": "The Key to all your problems."
+            }
+        },
+        "Handbook": {
+            "HandbookParent": "5c518ec986f7743b68682ce2",
+            "HandbookPrice": 3141592
+        }
+    },
+    "66a1c8e951bcf7ade30f7946": {
+        "ItemToClone": "KEY_W112_SAN",
+        "OverrideProperties": {
+            "Prefab": {
+                "path": "assets/content/items/spec/keys/item_key_5.bundle",
+                "rcid": ""
+            },
+            "BackgroundColor": "red",
+            "MaximumNumberOfUsage": -1
+        },
+        "LocalePush": {
+            "en": {
+                "name": "Woods Master Key",
+                "shortName": "WMK",
+                "description": "The Key to all your problems."
+            }
+        },
+        "Handbook": {
+            "HandbookParent": "5c518ec986f7743b68682ce2",
+            "HandbookPrice": 3141592
+        }
+    },
+    "66a1c8e951bcf7ade30f7947": {
+        "ItemToClone": "KEY_W112_SAN",
+        "OverrideProperties": {
+            "Prefab": {
+                "path": "assets/content/items/spec/keys/item_key_5.bundle",
+                "rcid": ""
+            },
+            "BackgroundColor": "red",
+            "MaximumNumberOfUsage": -1
+        },
+        "LocalePush": {
+            "en": {
+                "name": "Interchange Master Key",
+                "shortName": "IMK",
+                "description": "The Key to all your problems."
+            }
+        },
+        "Handbook": {
+            "HandbookParent": "5c518ec986f7743b68682ce2",
+            "HandbookPrice": 3141592
+        }
+    },
+    "66a1c8e951bcf7ade30f7948": {
+        "ItemToClone": "KEY_W112_SAN",
+        "OverrideProperties": {
+            "Prefab": {
+                "path": "assets/content/items/spec/keys/item_key_5.bundle",
+                "rcid": ""
+            },
+            "BackgroundColor": "red",
+            "MaximumNumberOfUsage": -1
+        },
+        "LocalePush": {
+            "en": {
+                "name": "Lighthouse Master Key",
+                "shortName": "LHMK",
+                "description": "The Key to all your problems."
+            }
+        },
+        "Handbook": {
+            "HandbookParent": "5c518ec986f7743b68682ce2",
+            "HandbookPrice": 3141592
+        }
+    },
+    "66a1c8e951bcf7ade30f7949": {
+        "ItemToClone": "KEY_W112_SAN",
+        "OverrideProperties": {
+            "Prefab": {
+                "path": "assets/content/items/spec/keys/item_key_5.bundle",
+                "rcid": ""
+            },
+            "BackgroundColor": "red",
+            "MaximumNumberOfUsage": -1
+        },
+        "LocalePush": {
+            "en": {
+                "name": "Streets Master Key",
+                "shortName": "STMK",
+                "description": "The Key to all your problems."
+            }
+        },
+        "Handbook": {
+            "HandbookParent": "5c518ec986f7743b68682ce2",
+            "HandbookPrice": 3141592
+        }
+    },
+    "66a1c8e951bcf7ade30f794a": {
+        "ItemToClone": "KEY_W112_SAN",
+        "OverrideProperties": {
+            "Prefab": {
+                "path": "assets/content/items/spec/keys/item_key_5.bundle",
+                "rcid": ""
+            },
+            "BackgroundColor": "red",
+            "MaximumNumberOfUsage": -1
+        },
+        "LocalePush": {
+            "en": {
+                "name": "Ground-Zero Master Key",
+                "shortName": "GZMK",
+                "description": "The Key to all your problems."
+            }
+        },
+        "Handbook": {
+            "HandbookParent": "5c518ec986f7743b68682ce2",
+            "HandbookPrice": 3141592
+        }
+    },
+    "66a1c8e951bcf7ade30f794b": {
+        "ItemToClone": "KEY_W112_SAN",
+        "OverrideProperties": {
+            "Prefab": {
+                "path": "assets/content/items/spec/keys/item_key_5.bundle",
+                "rcid": ""
+            },
+            "BackgroundColor": "red",
+            "MaximumNumberOfUsage": -1
+        },
+        "LocalePush": {
+            "en": {
+                "name": "Labs Master Key",
+                "shortName": "LBMK",
                 "description": "The Key to all your problems."
             }
         },
