@@ -1,13 +1,5 @@
-﻿using SPT.Reflection;
-using HarmonyLib;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Reflection;
 using EFT;
-using System.Runtime.CompilerServices;
 using SPT.Reflection.Patching;
 using configurable_keys.Scripts;
 

@@ -1,16 +1,10 @@
 ﻿using BepInEx;
-using BepInEx.Configuration;
 using BepInEx.Logging;
 using configurable_keys.Patches;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace configurable_keys
 {
-    [BepInPlugin("com.Super.configurable-keys", "Configurable Keys", "2.0.0")]
+    [BepInPlugin("com.Super.configurable-keys", "Configurable Keys", "2.1.0")]
     public class Plugin : BaseUnityPlugin
     {
         public static ManualLogSource LogSource;
@@ -18,7 +12,7 @@ namespace configurable_keys
         private void Awake()
         {
             LogSource = Logger;
-            LogSource.LogInfo("configurable-keys loaded!.");
+            LogSource.LogInfo("configurable-keys 2.1.0 loaded!.");
 
             new MasterKeyPatch().Enable();
         }
