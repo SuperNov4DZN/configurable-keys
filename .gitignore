@@ -9,3 +9,4 @@
 .eslintrc.json
 build.mjs
 tsconfig.json
+/configurable-keys.sln

@@ -87,6 +87,7 @@ class ConfigurableKeys implements IPreSptLoadMod, IPostDBLoadMod
             if (items[item]._parent == baseClasses.KEYCARD) 
             {
                 itemProps.DiscardLimit = -1;
+                itemProps.InsuranceDisabled = true;
 
                 if (config.unbreakable_keycards) 
                     itemProps.MaximumNumberOfUsage = 0;
