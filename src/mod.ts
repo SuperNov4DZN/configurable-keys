@@ -96,7 +96,7 @@ class ConfigurableKeys implements IPreSptLoadMod, IPostDBLoadMod
                     itemProps.Weight = 0.0;
             }
         }
-        logger.log(`[${this.mod.name}] Loaded successfully.`, color.GREEN)
+        logger.log(`[${this.mod.name}@${this.mod.version}] Loaded successfully.`, color.GREEN)
     }
 }
 
