@@ -37,6 +37,7 @@ namespace configurable_keys.Scripts
         private string _keyToUse = " ";
         private string _KeyName = " ";
         private string _location = " ";
+        private string _doorType = " ";
 
         public void Start()
         {
@@ -109,17 +110,33 @@ namespace configurable_keys.Scripts
             foreach (Door door in allDoors)  // mechanical doors
             {
 
-                Plugin.LogSource.LogWarning($"Door :: {door}");
-
-                Plugin.LogSource.LogWarning($"Door KeyType and Id -> {door.TypeKey} :: {door.KeyId}");
 
 
-                //if (!door.KeyId.IsNullOrWhiteSpace() || !door.KeyId.IsNullOrEmpty())
-                //{
-                //    door.KeyId = _keyToUse;
-                //}
+                if (!door.KeyId.IsNullOrWhiteSpace() || !door.KeyId.IsNullOrEmpty())
+                {
 
-                // (EFT.Interactive.KeycardDoor)
+                    _doorType = door.GetType().ToString();
+
+                    if (door.GetType() == typeof(EFT.Interactive.KeycardDoor))
+                    {
+                        Plugin.LogSource.LogWarning($"This door uses a keycard :: {door}");
+                        continue;
+                    }
+
+
+                    // DEBUG LOGS
+                    Plugin.LogSource.LogWarning($"Door :: {door}");
+                    Plugin.LogSource.LogWarning($"Door KeyType and Id -> {door.TypeKey} :: {door.KeyId}");
+                    Plugin.LogSource.LogWarning($"Door Name :: {door.name}");
+                    Plugin.LogSource.LogWarning($"Door Type :: {door.GetType().ToString()}");
+                    Plugin.LogSource.LogWarning($"Door Id :: {door.Id}");
+                    Plugin.LogSource.LogWarning($"Door Tag :: {door.tag}");
+
+                    door.KeyId = _keyToUse;
+
+                }
+
+                // ADD SHITURMANS STASH
             }
         }
 
