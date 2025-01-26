@@ -85,7 +85,8 @@ namespace configurable_keys.Scripts
                     _keyToUse = _keys[7];
                     _KeyName = _keyNames[7];
                     break;
-                case "Sandbox": case "Sandbox_High":
+                case "Sandbox": 
+                case "Sandbox_high":
                     _keyToUse = _keys[8];
                     _KeyName = _keyNames[8];
                     break;

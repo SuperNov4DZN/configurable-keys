@@ -1,6 +1,6 @@
 {
     "name": "configurable-keys",
-    "version": "2.1.1-beta",
+    "version": "2.1.2-beta",
     "sptVersion": ">=3.10",
     "loadBefore": ["ServerValueModifier"],
     "loadAfter": [],
