@@ -23,7 +23,7 @@ import { HttpResponseUtil } from "@spt/utils/HttpResponseUtil";
 import { ImporterUtil } from "@spt/utils/ImporterUtil";
 import { JsonUtil } from "@spt/utils/JsonUtil";
 import { RandomUtil } from "@spt/utils/RandomUtil";
-import { VFS } from "@spt/utils/VFS";
+import { FileSystemSync } from "@spt/utils/FileSystemSync";
 
 export class References 
 {
@@ -44,7 +44,7 @@ export class References
     public profileHelper: ProfileHelper;
     public ragfairPriceService: RagfairPriceService;
     public importerUtil: ImporterUtil;
-    public vfs: VFS;
+    public fs: FileSystemSync;
     public tables: IDatabaseTables;
     public botHelper: BotHelper;
     public randomUtil: RandomUtil;
@@ -74,7 +74,7 @@ export class References
         this.profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
         this.ragfairPriceService = container.resolve<RagfairPriceService>("RagfairPriceService");
         this.importerUtil = container.resolve<ImporterUtil>("ImporterUtil");
-        this.vfs = container.resolve<VFS>("VFS");
+        this.fs = container.resolve<FileSystemSync>("FileSystemSync");
         this.botHelper = container.resolve<BotHelper>("BotHelper");
         this.hashUtil = container.resolve<HashUtil>("HashUtil");
         this.probHelper = container.resolve<ProbabilityHelper>("ProbabilityHelper");
@@ -95,7 +95,7 @@ export class References
         this.profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
         this.ragfairPriceService = container.resolve<RagfairPriceService>("RagfairPriceService");
         this.importerUtil = container.resolve<ImporterUtil>("ImporterUtil");
-        this.vfs = container.resolve<VFS>("VFS");
+        this.fs = container.resolve<FileSystemSync>("FileSystemSync");
         this.botHelper = container.resolve<BotHelper>("BotHelper");
         this.randomUtil = container.resolve<RandomUtil>("RandomUtil");
         this.itemHelper = container.resolve<ItemHelper>("ItemHelper");

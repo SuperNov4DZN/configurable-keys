@@ -1,6 +1,6 @@
-import { HandbookItem } from "@spt/models/eft/common/tables/IHandbookBase";
-import { Item } from "@spt/models/eft/common/tables/IItem";
-import { Props } from "@spt/models/eft/common/tables/ITemplateItem";
+import { IHandbookItem } from "@spt/models/eft/common/tables/IHandbookBase";
+import { IItem } from "@spt/models/eft/common/tables/IItem";
+import { IProps } from "@spt/models/eft/common/tables/ITemplateItem";
 import { IBarterScheme } from "@spt/models/eft/common/tables/ITrader";
 import { ConfigTypes } from "@spt/models/enums/ConfigTypes";
 import { IRagfairConfig } from "@spt/models/spt/config/IRagfairConfig";
@@ -13,7 +13,7 @@ import * as path from "node:path";
 
 export class ItemGenerator 
 {
-    protected itemsToSell: Item[] = [];
+    protected itemsToSell: IItem[] = [];
     protected barterScheme: Record<string, IBarterScheme[][]> = {};
     protected loyaltyLevel: Record<string, number> = {};
     private itemConfig: CustomItemFormat;
@@ -69,7 +69,7 @@ export class ItemGenerator
         }
     }
 
-    private createHandbook(itemConfig: CustomItemFormat[string], itemID: string): HandbookItem 
+    private createHandbook(itemConfig: CustomItemFormat[string], itemID: string): IHandbookItem 
     {
         const tables = this.ref.tables;
         const tempClone = AllItemList[itemConfig["ItemToClone"]] || itemConfig["ItemToClone"];
@@ -81,7 +81,7 @@ export class ItemGenerator
                 HandbookIDs[itemConfig["Handbook"]["HandbookParent"]] || itemConfig["Handbook"]["HandbookParent"];
             const hbParent = tempHBParent;
 
-            const handbookEntry: HandbookItem = {
+            const handbookEntry: IHandbookItem = {
                 Id: itemID,
                 ParentId: hbParent,
                 Price: itemConfig["Handbook"]["HandbookPrice"]
@@ -164,7 +164,7 @@ export interface CustomItemFormat
 {
     [newID: string]: {
         ItemToClone: string;
-        OverrideProperties: Props;
+        OverrideProperties: IProps;
         LocalePush: {
             en: {
                 name: string;

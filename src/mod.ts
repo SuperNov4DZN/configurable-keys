@@ -7,7 +7,7 @@ import { DatabaseServer } from "@spt/servers/DatabaseServer";
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import { BaseClasses } from "@spt/models/enums/BaseClasses";
 import { LogTextColor } from "@spt/models/spt/logging/LogTextColor";
-import { VFS } from "@spt/utils/VFS";
+import { FileSystemSync } from "@spt/utils/FileSystemSync";
 
 import { ItemGenerator } from "./CustomKeys/ItemGenerator";
 import { References } from "./Refs/References";
@@ -36,10 +36,10 @@ class ConfigurableKeys implements IPreSptLoadMod, IPostDBLoadMod
         this.ref.postDBLoad(container);
 
         // Parse jsonc files
-        const vfs = container.resolve<VFS>("VFS");
+        const fs = container.resolve<FileSystemSync>("FileSystemSync");
         const parseJsonc = (filename: string) =>
             jsonc.parse(
-                vfs.readFile(path.resolve(__dirname, `../config/${filename}.jsonc`))
+                fs.read(path.resolve(__dirname, `../config/${filename}.jsonc`))
             );
 
         // Get config file
